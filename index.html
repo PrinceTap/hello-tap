@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14283f">
+  <meta name="description" content="A digital business card. Connect, save contact details, and explore services.">
+  <title>Digital Business Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="profile-card" aria-label="Digital business card">
+      <div class="cover" id="cover"></div>
+      <div class="profile-content">
+        <div class="identity">
+          <img id="avatar" class="avatar" src="https://placehold.co/240x240/e7edf3/23364d?text=Your+Photo" alt="Profile photo">
+          <div class="identity-copy">
+            <p class="eyebrow" id="companyName">YOUR COMPANY</p>
+            <h1 id="fullName">Alex Morgan</h1>
+            <p id="jobTitle" class="job-title">Business Consultant</p>
+          </div>
+        </div>
+
+        <p id="bio" class="bio">Helping people and businesses connect with confidence. Replace this introduction with your own short bio.</p>
+
+        <div class="primary-actions">
+          <a class="button button-primary" id="callButton" href="tel:+639171234567">☎ <span>Call</span></a>
+          <a class="button button-primary" id="emailButton" href="mailto:hello@example.com">✉ <span>Email</span></a>
+          <a class="button button-primary" id="whatsappButton" href="https://wa.me/639171234567" target="_blank" rel="noopener">◉ <span>WhatsApp</span></a>
+        </div>
+
+        <button class="button button-save" id="saveContact" type="button">＋ Save Contact</button>
+
+        <section class="section-block" id="socialSection">
+          <h2>Connect with me</h2>
+          <div id="socialLinks" class="social-links"></div>
+        </section>
+
+        <section class="section-block" id="catalogSection">
+          <div class="section-heading">
+            <h2>Products &amp; Services</h2>
+            <p>Explore what I offer</p>
+          </div>
+          <div id="catalog" class="catalog"></div>
+        </section>
+
+        <section class="contact-strip">
+          <div>
+            <p class="eyebrow">LET'S CONNECT</p>
+            <p class="contact-strip-title">Have a question?</p>
+          </div>
+          <a id="contactCta" class="button button-outline" href="mailto:hello@example.com">Get in touch ↗</a>
+        </section>
+
+        <footer>
+          <span id="footerCompany">YOUR COMPANY</span>
+          <span>Digital business card</span>
+        </footer>
+      </div>
+    </section>
+    <p class="page-note">Tap a button to connect or save this contact to your phone.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

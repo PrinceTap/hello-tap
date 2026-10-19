@@ -1,0 +1,95 @@
+:root {
+  --brand: #173653;
+  --accent: #c7a56b;
+  --page-bg: #eef2f6;
+  --card-bg: #ffffff;
+  --text: #172536;
+  --muted: #667487;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+a { color: inherit; }
+.page-shell { width: 100%; max-width: 760px; margin: 0 auto; padding: 24px 16px 36px; }
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 55px rgba(23, 38, 55, .12);
+}
+.cover {
+  height: 150px;
+  background: linear-gradient(120deg, var(--brand), #2b506f);
+  position: relative;
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  width: 260px; height: 260px; border: 1px solid rgba(255,255,255,.18);
+  border-radius: 50%; right: -40px; top: -140px;
+  box-shadow: 0 0 0 24px rgba(255,255,255,.035), 0 0 0 48px rgba(255,255,255,.025);
+}
+.profile-content { padding: 0 30px 26px; }
+.identity { display: flex; gap: 20px; align-items: end; margin-top: -55px; position: relative; }
+.avatar {
+  width: 118px; height: 118px; border-radius: 22px; object-fit: cover;
+  border: 5px solid white; background: #e7edf3; box-shadow: 0 5px 20px rgba(0,0,0,.12);
+}
+.identity-copy { padding-bottom: 5px; min-width: 0; }
+.eyebrow { margin: 0 0 5px; color: var(--accent); font-size: .73rem; font-weight: 800; letter-spacing: .13em; }
+h1 { font-size: clamp(1.65rem, 5vw, 2.25rem); line-height: 1.12; margin: 0 0 6px; overflow-wrap: anywhere; }
+.job-title { color: var(--muted); margin: 0; }
+.bio { margin: 22px 0; color: #536174; }
+.primary-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.button {
+  min-height: 46px; border-radius: 12px; padding: 12px 14px; display: inline-flex;
+  align-items: center; justify-content: center; gap: 8px; font-weight: 700;
+  font-size: .92rem; text-decoration: none; border: 1px solid transparent; cursor: pointer;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.button:hover { transform: translateY(-1px); }
+.button-primary { background: var(--brand); color: #fff; }
+.button-save { width: 100%; margin-top: 10px; color: var(--brand); background: #fff; border-color: #d9e1e9; }
+.section-block { margin-top: 30px; }
+h2 { font-size: 1.08rem; margin: 0 0 13px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 9px; }
+.social-link { border: 1px solid #dce4ec; border-radius: 999px; padding: 8px 13px; font-size: .88rem; font-weight: 700; text-decoration: none; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.section-heading p { margin: 0; font-size: .82rem; color: var(--muted); }
+.catalog { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.product { border: 1px solid #e1e7ed; border-radius: 15px; overflow: hidden; }
+.product img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: #edf1f5; }
+.product-info { padding: 12px; }
+.product h3 { font-size: .96rem; margin: 0 0 5px; }
+.product p { color: var(--muted); font-size: .85rem; margin: 0 0 9px; }
+.product .price { color: var(--brand); font-weight: 800; margin-bottom: 10px; }
+.product a { color: var(--brand); font-size: .86rem; font-weight: 700; text-decoration: none; }
+.contact-strip { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px; margin-top: 30px; background: #f4f6f8; border-radius: 16px; }
+.contact-strip-title { font-weight: 800; margin: 0; }
+.button-outline { border-color: var(--brand); color: var(--brand); background: white; white-space: nowrap; }
+footer { display: flex; justify-content: space-between; gap: 10px; color: #8793a1; font-size: .75rem; padding-top: 24px; }
+.page-note { text-align: center; color: #758294; font-size: .82rem; margin: 15px 0 0; }
+@media (max-width: 520px) {
+  .page-shell { padding: 0 0 24px; }
+  .profile-card { border-radius: 0 0 22px 22px; }
+  .profile-content { padding: 0 19px 22px; }
+  .cover { height: 125px; }
+  .identity { gap: 13px; margin-top: -46px; align-items: end; }
+  .avatar { width: 94px; height: 94px; border-radius: 18px; }
+  .identity-copy { padding-bottom: 3px; }
+  .eyebrow { font-size: .66rem; }
+  .job-title { font-size: .86rem; }
+  .primary-actions { gap: 7px; }
+  .button { padding: 11px 8px; font-size: .84rem; }
+  .primary-actions .button { flex-direction: column; gap: 2px; min-height: 62px; }
+  .catalog { gap: 9px; }
+  .product-info { padding: 10px; }
+  .contact-strip { align-items: flex-start; flex-direction: column; }
+  .button-outline { width: 100%; }
+}

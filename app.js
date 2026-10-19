@@ -11,9 +11,9 @@
 const customers = {
   "demo": {
     name: "Alex Morgan",
-    title: "Business Consultant",
-    company: "NORTHSTAR CONSULTING",
-    bio: "Helping people and businesses connect with confidence. Replace this introduction with your own short bio.",
+    
+   
+   
     phone: "+639171234567",
     email: "hello@example.com",
     whatsapp: "639171234567",
